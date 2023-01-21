@@ -1,0 +1,30 @@
+{% load static %}
+
+
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-xs-6 col-6">
+                     <a href="#" class="logo">
+                        <img src="{% static 'site/images/logo.png' %}" alt="">
+                    </a>
+                </div>
+                <div class="col-lg-9 col-md-9 col-sm-12 d-flex align-items-center justify-content-between mob_menu">
+                    <ul class="nav">
+                        <li class="active"><a href="#">Товары и услуги</a></li>
+                        <li><a href="#">Закупки</a></li>
+                        <li><a href="#">Продавцы</a></li>
+                        <li><a href="#">Покупатели</a></li>
+                    </ul>
+                    <a href="#" class="add_advert"><img src="{% static 'site/images/plus_circle.png' %}" alt="">Добавить объявление</a>
+                    <a href="{% url 'register' %}" class="add_advert"><img src="{% static 'site/images/user.png' %}" alt="">Вход / Регистрация</a>
+                </div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>

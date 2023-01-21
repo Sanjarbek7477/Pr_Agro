@@ -1,0 +1,6 @@
+# db
+
+create user agro with password 'root';
+
+create database agro_db owner agro;
+

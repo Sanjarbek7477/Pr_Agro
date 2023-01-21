@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'site/font/stylesheet.css' %}">
+    <link rel="stylesheet" href="{% static 'site/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'site/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'site/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'site/css/select2.min.css' %}">
+    <link rel="stylesheet" href="{% static 'site/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'site/css/media.css' %}">
+    <title>Agro</title>
+</head>
+
+{% if not auth %}
+{% include "site/partials/header.html" %}
+{% endif %}
+
+{% block content %} {% endblock %}
+
+{% if not auth %}
+{% include "site/partials/footer.html" %}
+{% endif %}
+
+    <script src="{% static 'site/js/jquery.min.js' %}"></script>
+    <script src="{% static 'site/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'site/js/cleave-phone.uz.js' %}"></script>
+    <script src="{% static 'site/js/cleave.min.js' %}"></script>
+    <script src="{% static 'site/js/select2.min.js' %}"></script>
+    <script src="{% static 'site/js/all.min.js' %}"></script>
+    <script src="{% static 'site/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'site/js/main.js' %}"></script>
+   <script>
+
+          $('#imageGallery').lightSlider({
+                gallery:true,
+                item:1,
+                loop: false,
+                thumbItem:6,
+                slideMargin:0,
+                enableDrag: true,
+                currentPagerPosition:'left',
+                onSliderLoad: function(el) {
+                    el.lightGallery({
+                        selector: '#imageGallery .lslide'
+                    });
+                }
+            });
+
+
+    </script>
+
+    <script>
+
+          $('#imageGallery').lightSlider({
+                gallery:true,
+                item:1,
+                loop: false,
+                thumbItem:6,
+                slideMargin:0,
+                enableDrag: true,
+                currentPagerPosition:'left',
+                onSliderLoad: function(el) {
+                    el.lightGallery({
+                        selector: '#imageGallery .lslide'
+                    });
+                }
+            });
+
+
+    </script>
+
+    <script>
+
+          $('#imageGallery').lightSlider({
+                gallery:true,
+                item:1,
+                loop: false,
+                thumbItem:6,
+                slideMargin:0,
+                enableDrag: true,
+                currentPagerPosition:'left',
+                onSliderLoad: function(el) {
+                    el.lightGallery({
+                        selector: '#imageGallery .lslide'
+                    });
+                }
+            });
+
+
+    </script>
+
+   <script>
+
+          $('#imageGallery').lightSlider({
+                gallery:true,
+                item:1,
+                loop: false,
+                thumbItem:6,
+                slideMargin:0,
+                enableDrag: true,
+                currentPagerPosition:'left',
+                onSliderLoad: function(el) {
+                    el.lightGallery({
+                        selector: '#imageGallery .lslide'
+                    });
+                }
+            });
+
+
+    </script>
+
+
+    <script>
+          $('.two_text').ellipsis({
+              lines:4,
+              ellipClass: 'ellip',
+              responsive: true
+            });
+    </script>
+
+
+    <script>
+        new Cleave('.tel', {
+            phone: true,
+            delimetrs: [" (", ") ", "-", "-"],
+            phoneRegionCode: 'UZ',
+            prefix: "+998"
+          });
+    </script>
+
+
+
+
+</body>
+</html>
+

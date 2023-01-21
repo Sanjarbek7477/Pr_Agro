@@ -1,0 +1,93 @@
+{% extends "site/base.html" %}
+{% block content %}
+{% load static %}
+
+
+    <div class="future other reg">
+        <div class="container">
+            <div class="registr_bl">
+                <ul>
+                    <li class="active"><a href="#">Avtorizatsiya</a></li>
+                    <li><a href="#">Ro'yxatdan o'tish</a></li>
+                </ul>
+                <div class="main_tab">
+
+
+                    <div id="avt" class="tab_item active">
+                        <div class="overlay"></div>
+                       <form method="post">
+                            {% csrf_token %}
+                            {% if log_error_user %}
+                            <h3 style="color: red;">Bunday foydalanuvchi yo'q</h3>
+                            {% elif log_error_pass %}
+                            <h3 style="color: red;">Parol noto'gri</h3>
+                            {% endif %}
+                           <div class="form_group">
+                               <label for="#">Username</label>
+                               <input type="text" placeholder="Username" name="log_username">
+                           </div>
+                           <div class="form_group">
+                               <label for="#">Parol</label>
+                               <input type="password" placeholder="************" name="log_password">
+                           </div>
+                           <button type="submit">Kirish</button>
+                           <a href="#" class="remem_pass">Parolni unutdingizmi?</a>
+                       </form>
+                    </div>
+
+
+                    <div id="reg" class="tab_item ">
+                        <div class="overlay"></div>
+                        <form method="post">
+                            {% csrf_token %}
+                            {% if error_o %}
+                            <h3 style="color: red;">Oferta shartlari qabul qilinmadi</h3>
+                            {% elif error_pass %}
+                            <h3 style="color: red;">Parollar noto'gri</h3>
+                            {% elif error_username %}
+                            <h3 style="color: red;">Bunaqa username allaqachon bor</h3>
+                            {% endif %}
+
+                            <div class="form_group">
+                               <label for="#">Kompaniya nomi</label>
+                                <input type="text" placeholder='"Agro holding"' name="company_name">
+                            </div>
+                            <div class="form_group">
+                               <label for="#">Ism va Familiyangiz</label>
+                               <input type="text" placeholder="Eshmat Toshmatov" name="name">
+                            </div>
+                            <div class="form_group">
+                               <label for="#">Foydalanuvchi nomi</label>
+                               <input type="text" placeholder="Username" name="username">
+                            </div>
+                            <div class="form_group">
+                               <label for="#">Telefon raqamingiz</label>
+                               <input type="tel" class="tel" placeholder="+998991112233" name="phone">
+                            </div>
+                            <div class="form_group">
+                               <label for="#">Parol</label>
+                               <input type="password" placeholder="************" name="password">
+                            </div>
+                            <div class="form_group">
+                               <label for="#">Parolni takrorlang</label>
+                               <input type="password" placeholder="************" name="password_conf">
+                            </div>
+                            <div class="check">
+                                <input type="checkbox" id="aser" style="display: none;" name="oferta">
+                                <label for="aser" class="check_form">
+                                    <a href="#" target="_blank">Oferta</a> shartlariga roziman!
+                                </label>
+                            </div>
+                           <button type="submit">Kirish</button>
+                        </form>
+                    </div>
+
+
+               </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+{% endblock %}

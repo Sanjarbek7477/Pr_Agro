@@ -1,0 +1,57 @@
+{% extends "site/base.html" %}
+{% block content %}
+{% load static %}
+
+
+    <div class="add_plus">
+        <div class="container">
+            <div class="links_top">
+                <a href="index.html">Главная</a>
+                <a href="#">Профиль пользователя</a>
+            </div>
+            <div class="d-flex justify-content-between alfon">
+                <div class="univ d-flex align-items-center">
+                    <div class="img_un">
+                        <img src="{% static 'site/images/logo_user.png' %}" alt="">
+                    </div>
+                    <div class="text_un">
+                        <h1>Universal Texnika HK</h1>
+                        <p>Руслан Хасанов</p>
+                        <a href="#">Изменить данные</a>
+                    </div>
+                </div>
+                <div class="schet">
+                    <p>Ваш счет:<b> 18000 сум</b></p>
+                    <a href="#" class="popol"><img src="{% static 'site/images/plus_circle.png' %}" alt="">Пополнить</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="payment">
+        <div class="container">
+            <h2>Мы очень рады, что вы пользуютесть платными услугами нашей площадки. <br>Пожалуйста выберите метод оплаты</h2>
+            <div class="d-flex opl justify-content-between">
+                <a href="#">
+                    <img src="{% static 'site/images/pp.jpg' %}" alt="">
+                    <p>Payme - оплата с помощью карты</p>
+                </a>
+                <a href="#">
+                    <img src="{% static 'site/images/cc.jpg' %}" alt="">
+                    <p>Click.uz система оплаты</p>
+                </a>
+                <a href="#">
+                    <img src="{% static 'site/images/tt.jpg' %}" alt="">
+                    <p>Оплата на местах</p>
+                </a>
+            </div>
+        </div>
+    </div>
+   <div class="about_benefits">
+        <div class="container">
+            <p>У каждого сельскохозяйственного производителя немало хлопот. Кроме круглогодичной заботы о растениях, животных, встают проблемы с реализацией выращенной продукции. Специфика этих товаров заключается в необходимости срочной реализации, где отлично может помочь торговая площадка а именно доска объявлений.  Не всегда удается оперативно найти покупателя, выгодно продать товар. Наша доска агро объявлений Узбекистана поможет каждому аграрию и сельскому хозяйству максимально быстро продать свою продукцию.</p>
+        </div>
+    </div>
+
+
+{% endblock %}

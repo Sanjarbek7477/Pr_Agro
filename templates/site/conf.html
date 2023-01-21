@@ -1,0 +1,10 @@
+{% extends "site/base.html" %}
+{% block content %}
+{% load static %}
+
+
+<h3>Rostan ham chiqishni xohlaysizmi?</h3>
+<a href="{% url 'register' %}" class="update_ber">Ha</a>
+<a href="{% url 'home_page' %}" class="update_ber">Yo'q</a>
+
+{% endblock %}
